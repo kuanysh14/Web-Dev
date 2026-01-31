@@ -1,0 +1,52 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0; padding: 0; background-color: #ffffff; color: #1b1f24;
+}
+
+
+.hero { text-align: center; padding: 80px 20px; }
+.hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
+.hero p { font-size: 20px; color: #57606a; max-width: 800px; margin: 0 auto 32px; }
+.btn-black-hero { background: #24292f; color: white; padding: 14px 32px; border-radius: 6px; font-weight: 600; border: none; cursor: pointer; }
+
+
+.pricing-grid {
+    display: flex; justify-content: center; max-width: 1200px; margin: 0 auto 80px; align-items: stretch;
+}
+.card {
+    background: white; border: 1px solid #d0d7de; padding: 32px; flex: 1; display: flex; flex-direction: column;
+    box-shadow: 0 3px 6px rgba(140, 149, 159, 0.1);
+}
+.enterprise-card {
+    border: 2px solid #0969da; position: relative; transform: scale(1.03); z-index: 10;
+    box-shadow: 0 12px 28px rgba(140, 149, 159, 0.2); border-radius: 6px;
+}
+.recommended-badge {
+    position: absolute; top: 0; left: 0; right: 0; background: #0969da; color: white;
+    text-align: center; font-size: 12px; font-weight: bold; padding: 4px 0; border-radius: 4px 4px 0 0;
+}
+
+.addons-section { max-width: 1200px; margin: 0 auto 100px; padding: 0 20px; }
+.addons-title { text-align: center; font-size: 40px; margin-bottom: 48px; }
+.addons-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.addon-card {
+    border: 1px solid #d0d7de; border-radius: 8px; padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); transition: 0.2s;
+}
+.addon-card:hover { box-shadow: 0 8px 24px rgba(140,149,159,0.15); }
+.new-tag { background: #dafbe1; color: #1a7f37; font-size: 12px; padding: 2px 8px; border-radius: 20px; margin-left: 8px; }
+.addon-link { color: #0969da; text-decoration: none; font-weight: 600; display: block; margin-top: 16px; }
+
+@media (max-width: 900px) {
+    .pricing-grid, .addons-grid { flex-direction: column; grid-template-columns: 1fr; }
+    .enterprise-card { transform: scale(1); margin: 20px 0; }
+}
+
+.plan-name { font-size: 24px; margin: 0; }
+.price { font-size: 32px; font-weight: 700; margin: 16px 0; }
+.card-btn { width: 100%; padding: 10px; border-radius: 6px; font-weight: 600; cursor: pointer; border: 1px solid #d0d7de; background: white; margin-bottom: 20px; }
+.card-btn.primary { background: #24292f; color: white; border: none; }
+.feature-list { list-style: none; padding: 0; font-size: 14px; }
+.feature-list li::before { content: "›"; margin-right: 8px; font-weight: bold; }
