@@ -1,0 +1,17 @@
+<h1>Albums List</h1>
+
+@if (!loaded) {
+  <p>Loading albums...</p>
+}
+
+<div class="albums-container">
+  @for (album of albums; track album.id) {
+    <div class="album-item">
+      <a [routerLink]="['/albums', album.id]">
+        {{ album.id }}. {{ album.title }}
+      </a>
+      
+      <button (click)="deleteAlbum(album.id)">Delete</button>
+    </div>
+  }
+</div>
