@@ -1,0 +1,13 @@
+<button (click)='goBack()'>Back to Album</button>
+<h1>Photos</h1>
+
+@if (!loaded) { <p>Loading photos...</p> }
+
+<div class="photo-grid">
+  @for (photo of photos; track photo.id) {
+    <div class="photo-item">
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title">
+      <p>{{ photo.title }}</p>
+    </div>
+  }
+</div>
