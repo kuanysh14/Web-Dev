@@ -1,0 +1,24 @@
+<div *ngIf="loaded; else loading">
+  <div class="detail-card">
+    <h1>Album ID: {{ album.id }}</h1>
+    
+    <div class="edit-section">
+      <label>Title:</label>
+      <input type="text" [(ngModel)]="newTitle">
+      <button (click)="saveTitle()">Save</button>
+    </div>
+
+    <p>User ID: {{ album.userId }}</p>
+
+    <div class="nav-buttons">
+      <button (click)="goBack()">Return</button>
+      <a [routerLink]="['/albums', album.id, 'photos']" class="photos-btn">
+        Show Photos
+      </a>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading album details…</p>
+</ng-template>
